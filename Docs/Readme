@@ -1,0 +1,196 @@
+==============
+BeConverter
+by Ramshankar
+==============
+
+[ Intro ]
+		"Intros are a real bore"
+			-- Documentation Crew
+
+BeConverter is a BeOS native, multi-threaded unit of measure conversion
+tool. It features high-speed, "live" cross-unit conversions using a custom
+built conversion engine. BeConverter will come in handy for American
+citizens since USA is the only country not to follow the metric system.
+For e.g: the US follows farenheit instead of celcius as a measure of
+temperature and miles instead of kilometers etc.
+
+BeConverter is a freeware program and can be used, copied and
+distributed freely but only in accord to the license agreement. A
+similar app for Windows is being sold for $25 (USD) :-( So the least
+you could do is write to me about BeConverter and copy it totally
+in accord to the License.
+
+BeConverter is completely extensible and flexible. It uses features of
+the BeOS File System (BFS) to its advantage for speed and ease of
+handling, the main reason why the BFS approach was chosen was not
+only will it bring in complete customizability but because I was lazy to
+write a new window for editing and adding units, checking for validity
+etc. :^)
+
+
+
+[ Some Features ]
+		"It may have some random bu.. eh, features"
+			-- Programmer
+
+* Supports full speed cross-unit conversions 
+* Comes with over 30 different categories 
+* Features a total of over 350 units 
+* Handles multiple conversions at the same time 
+* Makes use of the database characteristics of BFS
+* A "Copy" function, copies the conversions to the clipboard 
+* Supports variable, customizable precision & display notations 
+* Supports "live" updations to the converter (updates as u type)
+* Is fast, lightweight and easily configurable 
+* Features an in-built expression evaluator
+
+
+
+[ What's new in this version ]
+		"Out with the old, in with the new"
+			-- Ask anyone but your grandparents
+
+Version 1.2
+* Added one new category: Euro
+* Changed colors for the main list. Selected item is more clear now.
+* Cleaned up some code, resulting in 4 KB reduction of binary! :)
+* Optimized factor-based conversion routine marginally.
+* Wrote double-buffered text controls for flicker free drawing!
+* Multi-selectable text controls
+* Copy function extended to suit selected values
+* Change of License agreement.
+
+
+
+[ How to use BeConverter ]
+		"eaaagh... One must know how thu use ... eaagghhh... sthuff"
+			-- Sly Eastennegar
+
+*	Just fire up BeConverter by double clicking its icon. The first
+	window you will see on screen is a window that lists the available
+	categories. A category is a collection of related units, e.g.
+	Velocity, Volume, Time etc.
+
+*	Choose the category you require and double click it, or press
+	<ENTER>, or click the "Converter..." button.
+
+*	Now this will open up the Converter window through which you
+	can perform the conversion across the various units available in
+	the category.
+
+The option button that is selected in the converter window is the base
+unit in which you must enter the quantity. As you type in the quantity,
+the corresponding quantity in all the other units will be shown.
+
+The control with a ".#" indicates the current decimal precision of the
+result and can be changed, e.g. when the number is 4.334 and the
+precision is changed to 2, the number becomes 4.33.
+
+The ".# e" checkbox lets you specify if the result is to be shown in
+scientific mode, for e.g., in scientific mode 40000 is shown as 4e+4. The
+scientific precision for exponential notation is dependent on the precision
+setting. The "Copy" button copies the current conversion to the clipboard
+for use with other applications.
+
+In the text area where you type in the quantity a mathematical
+expression can be typed, e.g. (2 * 3) - (3 * 1) would return the value
+as 3.
+
+This is the basics of using BeConverter for converting units. BeConverter
+also supports custom units. Open the "Units" folder and take a look at
+the units in "Temperature" and "Velocity". Both these categories have
+different kinds of units that BeConverter can recognize.
+
+BeConverter displays only the first 23 units in any category. This issue
+may be fixed soon, but no one complained :) so ...
+
+
+
+[ Extra tweaking ]
+		"A software without tweakability is no software at all"
+			-- Anonymous
+
+BeConverter, since totally customizable makes it easy to add, edit,
+delete, rename units and categories. All categories are folders and
+all units are files in the folder (with the mime type: text/x-BeConverter
+or text/x-BeConverterFormula). To tweak the units of a category,
+open the category folder and change to "List View" in Tracker. Now
+you will be able to see the files with their attributes (if not choose the
+extra attributes from the Attributes menu of the Tracker window).
+
+* Revealing extra units:
+Some of the categories have more than 23 units but due to lack of
+space in the Converter window, BeConverter displays only the first
+23 units in the category. Sometimes, if the unit is common and you
+can't find that unit displayed through BeConverter, then go to the
+folder where those units are stored and most probably you may find
+more units. To make these units available to BeConverter rename the 
+file in such a way it moves up (like adding a space before the file name).
+
+* Removing unwanted units
+You can remove unwanted units by bouncing them off the list, if there
+are more than 23 units. You can do this by renaming the file in such a
+way it moves to the bottom (like adding a 'z' before the file name). If
+you have less than 23 units you might as well keep them all because
+you will be able to use all of them.
+
+* Adjust unit positions
+Adjusting the position of units is a bit tricky. While its easy to move a
+unit right to the top or bottom moving it to a precise location is not. The
+best and most effective method is renaming the file name in such a way
+it moves itself to the required location. By explaining it with an example
+you may be able to understand better. Suppose there are 4 units 001,
+002, 003 and 004 and you want to move 003 before 001 then rename
+the file 003 as 0011. Suppose you want to move 004 after 002 then
+rename 004 as 0021 and so on. This is because Tracker sorts the
+filenames as strings and not as numbers. This is the reason why we
+name the units as 001 and not as 1. If we name them like 1, 2, 3 and
+so on then once 10 comes it will be sorted after 1. So we will have
+1, 10, 2, 3 ... 9 and so on, hence we use two zeros before to ensure
+proper sorting.
+
+
+
+[ Contact info ]
+		"Thats not a bug... its a hidden feature!"
+			-- Hope not!
+
+BeConverter is an on-going effort and I need your feedback and
+encouragement to keep me interested in such projects. Anyway, I'm
+looking forward for your feedback, and I'm ready to answer any
+questions and I'm always open to suggestions and positive criticism and
+I wouldn't mind a few praises now and then either :)
+
+I can be contacted through e-mail: ramshankar@bemail.org
+You can also visit my home page: http://www.geocities.com/ram_beos/
+You can also find me sometimes at BeShare under nick: Somebody
+
+
+
+[ Known problems and limitations ]
+		"S.O.S -- Save our software..."
+			-- /me
+
+Well, this is the TODO section of BeConverter at the moment...
+
+* Precision menu's back picture doesn't redraw after selecting precision
+	This could probably be a bug in the OS (when the menu has back-pic)
+* Binary subtraction operator has a few minor glitches, needs fixing
+* Improve the speed of loading categories (by eliminating the temp file?)
+
+
+
+[ Credits ]
+		"Just don't forget my part in all this ..."
+			-- Whats his name?
+
+Programming:	Ramshankar (Somebody)
+Encouragement:	Ablyss (of BeShare) :-)
+
+Thanks to Marco Nelissen for his help with the BMimeType class...
+
+Also thanks to all the people who sent me mail saying they would have 
+bought BeConverter even if it costs something from 25 to even 50
+dollars!! Yes I got quite a few mails saying that or something much to
+that effect. Thanks all. This helps me sustain my efforts to make more
+commercial quality apps for BeOS... Thanks.
