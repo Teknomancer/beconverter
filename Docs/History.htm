@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+
+<TITLE>BeConverter &mdash; User's Guide: History</TITLE>
+
+</HEAD>
+<BODY BGCOLOR=white LINK=#0000C8 VLINK=#B100C8>
+
+<CENTER><IMG SRC="Images/BeConverter.png" HSPACE="30" VSPACE="0" BORDER="0"><B><FONT SIZE="+4"><FONT COLOR=#0000CC> B</FONT><FONT COLOR=#CC0000>e</FONT>Converter</FONT></B><IMG SRC="Images/BeConverter.png" HSPACE="30" VSPACE="0" BORDER="0"></CENTER>
+
+<P><CENTER>Copyright &copy; 2001 Ramshankar.<BR>All rights reserved.</CENTER></P>
+<BLOCKQUOTE>
+<HR><BR><BR>
+
+<H2>BeConverter's history</H2>
+<BLOCKQUOTE>
+<P>This page contains a brief history of the changes that have come across the BeConverter.</P>
+
+<H3>Version 1.3<BR><FONT COLOR=#1982CD>(Released)</FONT></H3>
+<UL type=disc>
+<LI>Fixed selection bugs in text-labels
+<LI>Optmized memory handling of text-labels
+<LI>Fixed minor memory leak in ConverterView
+<LI>Typing a character now selects the 1st category starting with that character
+<LI>Fixed some BMessage ownership leaks
+<LI>
+</UL>
+
+<H3>Version 1.2<BR><FONT COLOR=#1982CD>(Released)</FONT></H3>
+<UL type=disc>
+<LI>Added one category: Euro
+<LI>Changed colors for the main list. Selected items look more clear
+<LI>Cleaned up some parts of the code, lots more left
+<LI>Optimized factor-based conversion routine marginally
+<LI>Text-controls now are double-buffered for flicker free draws
+<LI>Multi-selectable text controls
+<LI>Copy function extended to suit selected values
+<LI>Change of License agreement
+</UL>
+
+
+<H3>Version 1.1<BR><FONT COLOR=#1982CD>(Released)</FONT></H3>
+<UL type=disc>
+<LI>Added double-click action for opening categories
+<LI>Rewrote the Precision button as a menu
+<LI>Made a few other minor optimizations in the evaluator
+<LI>Added Escape shortcut to close Converter window
+<LI>Made values of gigabyte and megabyte more accurate
+</UL>
+
+<H3>Version 1.0 - Freeware<BR><FONT COLOR=#1982CD>(Released)</FONT></H3>
+<UL type=disc>
+<LI>First public release.
+<LI>Added one new category: Fuel consumption.
+<LI>Fixed multi-threading problems. Spawned threads now are slayed.
+<LI>Compacted and optimized the code. Works about 10% faster.
+<LI>Removed hard-coded paths before this release.
+</UL>
+
+<H3>Version 1.0 - Final Analysis</H3>
+<UL type=disc>
+<LI>Error handling for Copy function added.
+<LI>Fixed minor loop-holes in the parsing algorithm
+</UL>
+
+<H3>Version 1.0 - Pre-release 5</H3>
+<UL type=disc>
+<LI>Added functions to register Mime types at start-up
+<LI>Added an option whether or not to register Mime types
+<LI>Re-used a lot of variables. Speed increase by about 2%
+<LI>Error is now flaged if the unit types are in a mixed state
+<LI>Fixed bug in handling the "ceil" and "floor" functions
+<LI>Added some extra exceptions in <I>libBeConverter.so</I>
+<LI>Added one extra function - "abs"
+<LI>Improved parsing speed by removing some unwanted code
+<LI>Added binary, octal, hexadecimal number systems to <I>libBeConverter.so</I>
+<LI>Added precision settings to <I>libBeConverter.so</I>
+<LI>Fixed bug that caused the "abs" function to return absurd values
+<LI>Refined the Converter window GUI a bit
+<LI>Arranged the controls in the code properly to suit the "Tab" navigation
+<LI>Memory leak in Version 1.0 Gamma is finally fixed
+<LI>Added "AboutRequested" to show 'About' when external apps ask for it
+<LI>Reduced binary size by about 6 KB by removing unwanted code
+<LI>Added a few more operators (binary shifts, ands and ors).
+<LI>Added inverse trigonometric and logarithmic functions.
+<LI>Added skin support, pictures are loaded from resource file
+<LI>Fixed a minor bug that caused the expression to get corrupted.
+<LI>BeConverter now restores scroll-bar positions (over looked this before)
+<LI>Removed initiations of multiple instances of a Converter window
+<LI>Fixed a rare bug that caused a failure to load any Converter windows
+</UL>
+
+<H3>Version 1.0 - Pre-release 4</H3>
+<UL type=disc>
+<LI>Fixed a few memory related bugs
+<LI>Added the BeConverter's formula based unit
+<LI>Added one new category: Temperature (at last!)
+<LI>Wrote an algorithm using formula based conversions
+<LI>Fixed a few bugs in the algorithm
+<LI>Added a few more functions like abs, ceil and floor
+<LI>At last fixed the 'Window not locked' warning/error</UL>
+
+<H3>Version 1.0 - Pre-release 3</H3>
+<UL type=disc>
+<LI>Major advancement: Completed <I>libBeConverter.so</I> (lot of work!)
+<LI>Now users can type in expressions and have them evaluated
+<LI>C style operator precedence
+</UL>
+
+<H3>Version 1.0 - Pre-release 2</H3>
+<UL type=disc>
+<LI>Added one new category: Digital quantity
+<LI>Fixed bug that crashed app when no. of units were more than 23
+<LI>Added a few more units to the Velocity category
+</UL>
+
+<H3>Version 1.0 - Pre-release 1</H3>
+<UL type=disc>
+<LI>Made some minor adjustments to the GUI
+<LI>Close button also saves the window position
+<LI>Added Precision and Notation options in the Converter window
+<LI>Fixed a practically improbable bug
+<LI>Handled some possible file handling exceptions
+<LI>Remembers window location for all Converter windows
+<LI>Too many bugs in <I>libBeConverter.so</I>. Began complete re-write
+</UL>
+
+<H3>Version 1.0 - Gamma</H3>
+<UL type=disc>
+<LI>Improved speed a little
+<LI>Used more BeOS native classes and structures
+<LI>Began work on the shared library <I>libBeConverter.so</I>
+<LI>Conventionalised the code
+<LI>Multi-threading problems discovered... not yet fixed
+<LI>More memory leaks were discovered... not yet fixed
+</UL>
+
+<H3>Version 1.0 - Beta</H3>
+<UL type=disc>
+<LI>Not released
+<LI>Added four new categories: Torque, Coverage, Magnetic Flux, Luminance
+<LI>Added the "Copy" function to copy all units to the clipboard
+<LI>Fixed a major segment violation
+<LI>Fixed other minor bugs
+</UL>
+
+<H3>Version 1.0 - Alpha</H3>
+<UL type=disc>
+<LI>Not released
+<LI>Added six new categories: Current, Charge, Illuminance, Viscosity, Specific Heat, Voltage
+<LI>Removed the BListView and implemented dynamic option buttons (lot of work!)
+<LI>Loaded the categories, units from BFS as tables and records, rather than from a file
+<LI>Automatically brought in extensive customizability
+<LI>Complete re-write of the converter with around 80% reused code
+<LI>Drastically reduced the output binary size
+<LI>Improved speed about 15 to 20%
+</UL>
+
+<H3>Version 1.0 - Debug</H3>
+<UL type=disc>
+<LI>First build. Lots of bugs... ;-)
+<LI>Came with 20 different in-built categories
+<LI>Supported "live" updations to the converter which made for quick conversion
+<LI>Saves the categories, units in files and not as a database-like structure
+<LI>Binary size was exteremely large due to lot of unwanted code
+<LI>Program was too slow in its execution
+<LI>No customizations were possible
+<LI>"Window not locked" warning/error was found, not fixed
+</UL>
+
+</BLOCKQUOTE><HR>
+<CENTER>|| <A HREF="Index.htm">Table of contents</A> ||</CENTER><HR>
+<FONT SIZE="1"><P><CENTER>
+
+Copyright &copy; 2001 Ramshankar. All Rights Reserved.<BR>
+All cited trademarks and registered trademarks are the property of their respective owners.</CENTER></P><FONT>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

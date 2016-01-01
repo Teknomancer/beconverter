@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+
+<TITLE>BeConverter &mdash; User's Guide: Expressions</TITLE>
+
+</HEAD>
+<BODY BGCOLOR=white LINK=#0000C8 VLINK=#B100C8>
+
+<CENTER><IMG SRC="Images/BeConverter.png" HSPACE="30" VSPACE="0" BORDER="0"><B><FONT SIZE="+4"><FONT COLOR=#0000CC> B</FONT><FONT COLOR=#CC0000>e</FONT>Converter</FONT></B><IMG SRC="Images/BeConverter.png" HSPACE="30" VSPACE="0" BORDER="0"></CENTER>
+
+<P><CENTER>Copyright &copy; 2001 Ramshankar.<BR>All rights reserved.</CENTER></P>
+<BLOCKQUOTE>
+<HR><BR><BR>
+
+<H2>Expressions</H2>
+<BLOCKQUOTE>
+<P>In the <B><FONT FACE=Helvetica COLOR=#550088>Initial value</FONT></B> value textbox in every Converter window, you can type in regular mathematical, paranthesized expressions and have them evaluated by pressing <U><B><FONT FACE=Helvetica>Enter</FONT></B></B></U>. If you don't press <U><B><FONT FACE=Helvetica>Enter</FONT></B></B></U> after typing the expression, BeConverter will treat it as a single number and more often than not it will evaluate to zero or the first number in the expression. So once you complete typing the expression, press <U><B><FONT FACE=Helvetica>Enter</FONT></B></B></U> to have it evaluated.</P>
+
+<P>Below is an example of an expression that has been evaluated:</P>
+
+<CENTER><IMG SRC="Images/Expression.png" VSPACE="0" HSPACE="0" BORDER="0"></CENTER>
+
+<P>BeConverter thus includes a comprehensive paranthesised expression evaluator built into it. Though it is in its experimental stages it works quite well and has almost all required functions and operators. Below are the functions and constants that are supported:</P>
+<P>
+<TABLE WIDTH="90%" BORDER="1" CELLSPACING="0" CELLPADDING="6">
+<TH BGCOLOR=#FFFFF1 ALIGN=LEFT WIDTH=25%><B><FONT FACE="Helvetica">Syntax</FONT></B></TH>
+<TH BGCOLOR=#FFFFF1 ALIGN=LEFT WIDTH=65%><B><FONT FACE="Helvetica">Description</FONT></B></TH>
+<TR>
+	<TD><TT>sin(n)</TT></TD>
+	<TD>Returns the sine value.</TD>
+</TR>
+<TR>
+	<TD><TT>cos(n)</TT></TD>
+	<TD>Returns the cosine value.</TD>
+</TR>
+<TR>
+	<TD><TT>tan(n)</TT></TD>
+	<TD>Returns the tangent value.</TD>
+</TR>
+<TR>
+	<TD><TT>asin(n)</TT></TD>
+	<TD>Returns the arc-sine value.</TD>
+</TR>
+<TR>
+	<TD><TT>acos(n)</TT></TD>
+	<TD>Returns the arc-cosine value.</TD>
+</TR>
+<TR>
+	<TD><TT>atan(n)</TT></TD>
+	<TD>Returns the arc-tangent value.</TD>
+</TR>
+<TR>
+	<TD><TT>abs(n)</TT></TD>
+	<TD>Returns the absolute value.</TD>
+</TR>
+<TR>
+	<TD><TT>ceil(n)</TT></TD>
+	<TD>Returns the closest integer larger than or equal to n.</TD>
+</TR>
+<TR>
+	<TD><TT>floor(n)</TT></TD>
+	<TD>Returns the smallest integer smaller than or equal to n.</TD>
+</TR>
+<TR>
+	<TD><TT>exp(n)</TT></TD>
+	<TD>Returns e to the power of n.</TD>
+</TR>
+<TR>
+	<TD><TT>log(n)</TT></TD>
+	<TD>Returns logarithmic value to the base e.</TD>
+</TR>
+<TR>
+	<TD><TT>ans</TT></TD>
+	<TD>Substitues the last stored answer (if any).</TD>
+</TR>
+<TR>
+	<TD><TT>sqrt(n)</TT></TD>
+	<TD>Returns the square root of n.</TD>
+</TR>
+<TR>
+	<TD><TT>pi</TT></TD>
+	<TD>Substitutes the value of Pi as 3.14159265358979323846.</TD>
+</TR>
+
+</TABLE>
+
+<P>The following operators are also supported:</P>
+<TABLE WIDTH="90%" BORDER="1" CELLSPACING="0" CELLPADDING="6">
+<TH BGCOLOR=#FFFFF1 ALIGN=LEFT WIDTH=25%><B><FONT FACE="Helvetica">Syntax</FONT></B></TH>
+<TH BGCOLOR=#FFFFF1 ALIGN=LEFT WIDTH=65%><B><FONT FACE="Helvetica">Description</FONT></B></TH>
+<TR>
+	<TD><TT>+</TT></TD>
+	<TD>Numeric addition.</TD>
+</TR>
+<TR>
+	<TD><TT>-</TT></TD>
+	<TD>Numeric subtraction.</TD>
+</TR>
+<TR>
+	<TD><TT>*</TT></TD>
+	<TD>Numeric multiplication.</TD>
+</TR>
+<TR>
+	<TD><TT>/</TT></TD>
+	<TD>Numeric division</TD>
+</TR>
+<TR>
+	<TD><TT>%</TT></TD>
+	<TD>Remainder operator.</TD>
+</TR>
+<TR>
+	<TD><TT>^</TT></TD>
+	<TD>Radical.</TD>
+</TR>
+<TR>
+	<TD><TT><<</TT></TD>
+	<TD>Binary shift.</TD>
+</TR>
+<TR>
+	<TD><TT>>></TT></TD>
+	<TD>Binary shift.</TD>
+</TR>
+<TR>
+	<TD><TT>&&, and, &</TT></TD>
+	<TD>Binary and.</TD>
+</TR>
+<TR>
+	<TD><TT>||, or, |</TT></TD>
+	<TD>Binary or.</TD>
+</TR>
+</TABLE>
+
+<P>So as you can see it supports all the standard operators and functions and has some extra ones as well. The evaluator follows standard C style operator precedence.</P>
+
+<P>Here are some examples of expressions:</P><BLOCKQUOTE>
+<TT>sin(30) + 0.5 + (1/2)</TT><BR><BR>
+<TT>(10 - 4) + (6 + 12)</TT><BR><BR>
+<TT>abs(-34.53)</TT><BR><BR>
+<TT>0 and 1</TT><BR><BR>
+<TT>16^(1/4)</TT></BLOCKQUOTE>
+
+<P>For trigonometric functions you can choose the numbers in either radians or degrees through the Options window.</P>
+<P>Please note that while using the expression evaluator you cannot specify numbers in its scientific form. But you can express the number mathematically instead. For example, you can express 99.99e+2 as (99.99) * (10^2). Any number of spaces in the expression are allowed.</P>
+
+<P>In some cases you might receive wrong results from the expression evaluator, in which case, heavily paranthesize your expression until you get the result. Explicitly paranthesizing expressions often assures correct operator and operand precedence, resulting in proper parsing and computation of the expression.</P>
+
+<P>Please bear in mind that this is only an experimental expression evaluator and may be prone to errors. Although it was tested, there may arise errors in parsing and/or computing. If you discover an error, and you are sure it is an error with BeConverter and not on your part, please e-mail the author. Future versions will patch up errors (if any) as and when possible.</P>
+</BLOCKQUOTE><HR>
+<CENTER>|| <A HREF="Index.htm">Table of contents</A> || <A HREF="Setting options.htm">Setting options</A> || <A HREF="Custom categories.htm">Custom categories</A> ||</CENTER><HR>
+<FONT SIZE="1"><P><CENTER>
+
+Copyright &copy; 2001 Ramshankar. All Rights Reserved.<BR>
+All cited trademarks and registered trademarks are the property of their respective owners.</CENTER></P><FONT>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

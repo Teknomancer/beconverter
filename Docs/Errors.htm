@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+
+<TITLE>BeConverter &mdash; User's Guide: Errors and solutions</TITLE>
+
+</HEAD>
+<BODY BGCOLOR=white LINK=#0000C8 VLINK=#B100C8>
+
+<CENTER><IMG SRC="Images/BeConverter.png" HSPACE="30" VSPACE="0" BORDER="0"><B><FONT SIZE="+4"><FONT COLOR=#0000CC> B</FONT><FONT COLOR=#CC0000>e</FONT>Converter</FONT></B><IMG SRC="Images/BeConverter.png" HSPACE="30" VSPACE="0" BORDER="0"></CENTER>
+
+<P><CENTER>Copyright &copy; 2001 Ramshankar.<BR>All rights reserved.</CENTER></P>
+<BLOCKQUOTE>
+<HR><BR><BR>
+
+<H2>Errors and solutions</H2>
+<BLOCKQUOTE>
+<P>This section covers how to deal with errors you might receive while using BeConverter. Please note these errors don't mean bugs in the program, they are errors thrown to you by BeConverter if it finds one while trying to use a category or while trying to load the category and so on.</P>
+
+<P>The errors and their solutions are explained below:</P>
+
+<H3>Number of units are insufficient...</H3>
+<BLOCKQUOTE>
+BeConverter flags this error when the category you are trying to load has less than 2 units. This means that either the category is empty or has only one unit. To fix this problem, simply add more units since there has to be atleast 2 units to convert to and from.
+</BLOCKQUOTE>
+
+<H3>One or more units are of the wrong type...</H3>
+<BLOCKQUOTE>
+BeConverter flags this error when the category you are trying to load has a mixture of factor based and formula based units. Its not possible to convert between such units and hence BeConverter flags the error. To fix the problem, either remove the factor based or formula based units and make sure the category has only one type of unit, or make all the factor based units as formula based units. You can do this by making the "To Equation" attribute as b*k and the "From Equation" attribute as "b/k" and specify the value of k in the "Constant (k)" attribute.<BR><BR>
+
+See the Custom Categories section of this manual for more detailed information on Formula and Factor based units.
+</BLOCKQUOTE>
+
+<H3>Could not determine a base unit...</H3>
+<BLOCKQUOTE>
+This error comes up when BeConverter cannot determine a base unit in the list of units. This means no unit in the category had its Value attribute as 1. To fix the problem make a unit with its Value attribute as 1 which will be the base unit. Then express all other units as a factor of the base unit. For more detailed information read the "Custom categories" section of this manual.<BR><BR>
+
+If its  a formula based conversion table then make sure the base unit has its "To Equation" and "From Equation" fields as the letter "b" (case isn't important). Next make sure all the other forumulae for all the other units are proper. Read the "Custom categories" section for more information.
+</BLOCKQUOTE>
+
+<H3>No categories were found...</H3>
+<BLOCKQUOTE>
+If you have messed around with BeConverter's folders you may receive this message. If the <FONT COLOR=#008D39><TT>Units</TT></FONT> folder is missing or out of place this error will pop-up, in which case you won't see any categories listed since BeConverter could not locate the folder. To fix the problem move the <FONT COLOR=#008D39><TT>Units</TT></FONT> folder back into BeConverter's folder. If you have deleted that folder by mistake then you will need to re-install BeConverter. See the "Installation" section for more details on un-installation and installation.
+</BLOCKQUOTE>
+
+<H3>Unknown error occured while trying...</H3>
+<BLOCKQUOTE>
+This is a serious problem. BeConverter will flag this error when it could not properly write to or read from any settings file. This means your BeOS File System has some standard folders renamed or deleted. This error will occur only if you had manually renamed or deleted one or more standard and critical BeOS folders, in which case you should know what folders or files to rename or restore.
+</BLOCKQUOTE>
+
+</BLOCKQUOTE>
+<HR>
+<CENTER>|| <A HREF="Index.htm">Table of contents</A> || <A HREF="Custom categories.htm">Custom categories</A> || <A HREF="Using BeConverter.htm">Using BeConverter</A> ||</CENTER><HR>
+<FONT SIZE="1"><P><CENTER>
+
+Copyright &copy; 2001 Ramshankar. All Rights Reserved.<BR>
+All cited trademarks and registered trademarks are the property of their respective owners.</CENTER></P><FONT>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

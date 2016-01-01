@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+
+<TITLE>BeConverter &mdash; User's Guide: Using BeConverter</TITLE>
+
+</HEAD>
+<BODY BGCOLOR=white LINK=#0000C8 VLINK=#B100C8>
+
+<CENTER><IMG SRC="Images/BeConverter.png" HSPACE="30" VSPACE="0" BORDER="0"><B><FONT SIZE="+4"><FONT COLOR=#0000CC> B</FONT><FONT COLOR=#CC0000>e</FONT>Converter</FONT></B><IMG SRC="Images/BeConverter.png" HSPACE="30" VSPACE="0" BORDER="0"></CENTER>
+
+<P><CENTER>Copyright &copy; 2001 Ramshankar.<BR>All rights reserved.</CENTER></P>
+<BLOCKQUOTE>
+<HR><BR><BR>
+
+<H2>Using BeConverter</H2>
+<BLOCKQUOTE>
+<P>Using the BeConverter is very simple and straight-forward. When you launch BeConverter, the first screen looks something like this:</P>
+
+<CENTER><IMG SRC="Images/CategoriesWindow.png" VSPACE="0" HSPACE="0" BORDER="0"></CENTER>
+
+<H3>The various buttons</H3><BLOCKQUOTE>
+<P>The <B><FONT FACE=Helvetica COLOR=#550088>Converter...</FONT></B> button opens the Converter window through which you perform conversions.</P>
+
+<P>The <B><FONT FACE=Helvetica COLOR=#550088>Options...</FONT></B> button brings up the permanent settings window through which you specify some settings for BeConverter.</P>
+
+<P>The <B><FONT FACE=Helvetica COLOR=#550088>About...</FONT></B> button brings up BeConverter's copyright and developer information.</P>
+
+<P>The <B><FONT FACE=Helvetica COLOR=#550088>Help...</FONT></B> button opens up your browser with this user's guide.</P>
+
+<P>The <B><FONT FACE=Helvetica COLOR=#550088>Close</FONT></B> button closes BeConverter and all its open windows.</P></BLOCKQUOTE>
+
+<P>To perform conversion you have to highlight any category and click the <B><FONT FACE=Helvetica COLOR=#550088>Converter...</FONT></B> button or highlight any one category and press <U><B><FONT FACE=Helvetica>Enter</FONT></B></U> or double click the category.</P>
+
+<P>Once you have clicked the button, the BeConverter displays a new window with all the units in the selected (highlighted) category. This new window is called the Converter window. It is through this window you perform the conversions. In our example below we have opened the "Digital Quantity" converter:</P>
+
+<CENTER><IMG SRC="Images/ConverterWindow.png" VSPACE="0" HSPACE="0" BORDER="0"></CENTER>
+
+<P>As you can see the above illustration explains the various elements of the Converter window's interface.</P>
+
+<P>Just as <I><FONT FACE=Helvetica COLOR=991122>Tracker</FONT></I> reserves a window for each folder you open, BeConverter reserves a Converter window for each category you choose. Thus, you can open and work with several Converter windows simultaneously. This is possible thanks to BeConverter's accomodative framework.</P>
+
+<H3>The basics</H3>
+<BLOCKQUOTE>
+<P>To use the converter, first you need fill in the <B><FONT FACE=Helvetica COLOR=#550088>Initial value</FONT></B> textbox, which is the quantity in the selected base unit. In our example, the initial value is 640 and the selected base unit is "megabyte", which means the value is 640 megabytes.</P>
+
+<P>The <B><FONT FACE=Helvetica COLOR=#550088>Initial value</FONT></B> textbox allows you to type in numbers either in the standard normal notation or in the scientific notation. In either case you are allowed to use commas to seperate digits in any manner, hence entering large numbers is made easier. For example, the value of 10 million (10000000) can be entered as 10,000,000 and will be properly understood by BeConverter. Commas can be used anywhere in the number as they will be ignored during calculations.</P>
+
+<P>BeConverter also understands numbers in scientific notation. For example, you can enter 10000 as 1e+4.</P>
+
+<P>Another built-in functionality of BeConverter is that in the <B><FONT FACE=Helvetica COLOR=#550088>Initial value</FONT></B> textbox you can type regular mathematical expressions and have them evaluated by pressing <U><B><FONT FACE=Helvetica>Enter</FONT></B></B></U>. Click <A HREF="Expressions.htm">here</A> to find out more on this expression evaluator.
+
+<P>As you type in the number or as you choose the base-unit, the converter updates itself by re-calculating all the other units. This is what is called "live" updation. Although it re-calculates all the units "live" using a conversion engine there isn't any slowdown in the speed even on low-end systems.</P>
+
+<P>These are the basic and fundamental steps involved in using the BeConverter.</P>
+</BLOCKQUOTE>
+<H3>The extras</H3>
+<BLOCKQUOTE>
+<P>Apart from performing basic conversions you will sometimes need to increase or decrease the precision (the number of decimal places) being displayed or you may even wish to see the values in scientific notation.</P>
+
+<P>The <B><FONT FACE=Helvetica COLOR=#550088>.# e</FONT></B> checkbox signifies the display notation currently used. You can toggle between scientific notation and the usual numeric notation at anytime. Scientific notation expresses very large or very small values in powers of 10. For example, the notation 999e+3 means 999 &times; 10&sup3;.</P>
+
+<P>The <B><FONT FACE=Helvetica COLOR=#550088>#. 6</FONT></B> button indicates the current precision of the values being displayed. You can choose from a list of precision available (ranges from 0 to 15) by clicking the menu. If you want a bigger precision you must choose so from the Options window.</P>
+
+<B><FONT FACE=Helvetica COLOR=#DC0000>Important note:</FONT></B><BLOCKQUOTE>
+Please bear in mind that the aforementioned options in the Converter window are purely temporary, provided for quick alterations of settings.<BR><BR>
+
+They always revert back to the values specified in the Options window, which is where you specify permanent settings. These are only temporary. To see how to set permanent settings for BeConverter refer the "Setting options" section of this manual.</BLOCKQUOTE>
+
+<P>The <B><FONT FACE=Helvetica COLOR=#550088>Copy</FONT></B> button isn't the usual copy function. Its an extended copy function that copies the current conversion with all the units in a neat format.</P>
+
+<P>If you wish to copy the results of your conversion to some other program then copying each unit's value one-by-one can be tedious and frustrating. This copy function copies either the selected values to the clipboard or all the values (if none are selected) to the clipboard quickly.</P>
+
+<P>By using the copy button in our example,the following text was copied to the clipboard:<BR>
+<PRE>640 megabyte
+
+	= 0.000640 TB
+	= 0.640000 GB
+	= 640.000000 MB
+	= 655360.000000 KB
+	= 671088640.000000 B
+	= 5368709120.000000 b
+</PRE>
+If you don't wish to copy all the units to the clipboard you can select a particular value and press <U><B><FONT FACE=Helvetica>C</FONT></B></U> to copy the values from the textboxes of your choice.</P>
+
+<P>The <B><FONT FACE=Helvetica COLOR=#550088>Close</FONT></B> button closes the current Converter window.</P>
+</BLOCKQUOTE>
+
+</BLOCKQUOTE><HR>
+<CENTER>|| <A HREF="Index.htm">Table of contents</A> || <A HREF="Setting options.htm">Setting options</A> || <A HREF="Custom categories.htm">Custom categories</A> ||</CENTER><HR>
+<FONT SIZE="1"><P><CENTER>
+
+Copyright &copy; 2001 Ramshankar. All Rights Reserved.<BR>
+All cited trademarks and registered trademarks are the property of their respective owners.</CENTER></P><FONT>
+</BLOCKQUOTE>
+</BODY>
+</HTML>

@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+
+<TITLE>BeConverter &mdash; User's Guide: Custom categories</TITLE>
+
+</HEAD>
+<BODY BGCOLOR=white LINK=#0000C8 VLINK=#B100C8>
+
+<CENTER><IMG SRC="Images/BeConverter.png" HSPACE="30" VSPACE="0" BORDER="0"><B><FONT SIZE="+4"><FONT COLOR=#0000CC> B</FONT><FONT COLOR=#CC0000>e</FONT>Converter</FONT></B><IMG SRC="Images/BeConverter.png" HSPACE="30" VSPACE="0" BORDER="0"></CENTER>
+
+<P><CENTER>Copyright &copy; 2001 Ramshankar.<BR>All rights reserved.</CENTER></P>
+<BLOCKQUOTE>
+<HR><BR><BR>
+
+<H2>Custom categories</H2>
+<BLOCKQUOTE>
+<P>One of the most distinct features of BeConverter is its customizable nature. It was written in such a way it makes good use of BeOS' 64-bit journaling file system so that its of maximum use to you. You have complete control of any and all categories and units.</P>
+
+<P>If you think custom categories are any different from the in-built ones then you are mistaken. All the categories are alike, meaning they are fully customizable. The only difference between the in-built categories and custom categories (categories that can be created by you) is that the in-built ones were added by the author while the custom categories were added by you, but both using the same method which is discussed in this section.</P>
+
+<P>Thus to be able to edit, modify and delete categories and units you don't need any extra application or utility. BeOS' <I><FONT FACE=Helvetica COLOR=991122>Tracker</FONT></I> system will do fine.</P>
+
+<H3>The concept</H3>
+<BLOCKQUOTE>
+<P>Well for those of you who still haven't understood the "64-bit journaling file system" concept this little paragraph should be sufficient. The BeOS file system is like a database where folders are tables, files in the folder are records and the file's attributes are columns or fields. BeConverter uses this to its advantage such that categories are folders and files in those folders are units belonging to the category.</P>
+
+<P>For example, the Distance category is but a folder which contains specific type of files (which is discussed later on in this page) identified by BeConverter as units. Hence BeConverter identifies and uses these units.</P>
+
+<P>This way the units are totally customizable meaning you can freely add, edit and remove units using BeOS itself.</P>
+</BLOCKQUOTE>
+
+<H3>Adding categories</H3>
+<BLOCKQUOTE>
+<P>Categories in BeConverter are basically folders in BeOS. Thus adding a category is like creating a new folder in the <FONT COLOR=#008D39><TT>Units</TT></FONT> folder. This <FONT COLOR=#008D39><TT>Units</TT></FONT> folder is present as a sub-folder in the BeConverter's folder.</P>
+
+<P>Now, to add a category simply create a new folder inside <FONT COLOR=#008D39><TT>Units</TT></FONT>. Name the folder as the category name you are adding. The below illustration shows how the process of creating a folder using <I><FONT FACE=Helvetica COLOR=991122>Tracker</FONT></I>:</P></BLOCKQUOTE>
+
+<CENTER><IMG SRC="Images/NewCategory.png" VSPACE="0" HSPACE="0" BORDER="0"></CENTER>
+<BLOCKQUOTE>
+<P>The menu shown above is invoked by right-clicking on any 'empty' space in the window. Now that you have created a category the next step is creating units that belong to that category. Read on...</P>
+
+</BLOCKQUOTE>
+
+<H3>Adding units</H3>
+<BLOCKQUOTE>
+<P>Adding units is relatively a bit more difficult than adding categories. But this has been made as easy as possible by BeConverter.</P>
+
+<P>The first step is determining which type of conversion is needed by your category. There are two types of conversion supported by BeConverter&mdash;Factor based conversions and Formula based conversions.</P>
+
+<H3>Factor based conversions</H3>
+<P>Factor based conversion means all the units are a multiplicative factor of the base unit. There are no relations involving any-other kind of mathematical operation. Among the categories that you get with BeConverter all the categories (except Temperature) use this kind of conversions.</P>
+
+<P>The follow section refers to factor based convesions and <I>not</I> formula based conversions. The formula based conversions a bit more complex and is explained later on under this section.</P>
+
+<P>When you install BeConverter it registers a new file type called "BeConverter". This file type has three extra attributes named "Unit", "Symbol" and "Value". In order for BeConverter to understand units, these attributes are required.</P>
+
+<P>So a unit to BeConverter is its registered file. Every BeConverter's factor based unit file must have its MIME type extension as "<TT>text/x-BeConverter</TT>" (case sensitive, without the quotes, of course). If you are creating the unit by following the steps below you need not set the MIME type manually. Creating a BeConverter file is easy and is explained below.</P>
+
+<P>First navigate to the category (folder) in which you need to add units. The below illustration shows the first step in adding a unit. The menu shown below is invoked by right-clicking on an 'empty' space in the <I><FONT FACE=Helvetica COLOR=991122>Tracker</FONT></I> window.</P>
+</BLOCKQUOTE>
+
+<CENTER><IMG SRC="Images/NewFactorUnit.png" VSPACE="0" HSPACE="0" BORDER="0"></CENTER>
+<BLOCKQUOTE>
+<P>As you can see the first step is to create the BeConverter file using the BeConverter's <I><FONT FACE=Helvetica COLOR=991122>Tracker</FONT></I> Template which would have been installed with BeConverter. This template will create a new BeConverter unit file&mdash;The file with the three required attributes in order to make it a valid unit.</P>
+
+<B><FONT FACE=Helvetica COLOR=#DC0000>Note:</FONT></B>
+<BLOCKQUOTE>
+If you are using the original <I><FONT FACE=Helvetica COLOR=991122>Tracker</FONT></I> i.e. the <I><FONT FACE=Helvetica COLOR=991122>Tracker</FONT></I> system that ships with BeOS R5, the templates won't be installed, hence you have to create the unit files manually. To do this create an empty text file. Then change its MIME type as <TT>text/x-BeConverter</TT>.<BR><BR>
+
+Because this is a bit cumbersome and not as easy as using the templates it is highly recommended you download a copy of the latest <I><FONT FACE=Helvetica COLOR=991122>Tracker</FONT></I> system called <I><FONT FACE=Helvetica COLOR=991122>Tracker.NewFS</FONT></I> available at www.bebits.com.
+</BLOCKQUOTE>
+
+<P><B>While creating units its required you keep the mode of view as List View in the </B><I><FONT FACE=Helvetica COLOR=991122>Tracker</FONT></I> window as shown in the illustration above.</P>
+
+<P>By following the above step, a new BeConverter unit file named "New BeConverter File" will be created and a small window will pop-up explaining a bit about the unit. Dismiss the window, and rename the file as a number like 001 if its the first unit, 002 if its the second unit and so on. This isn't required but its better to number the files so that they appear in the order you want them to.</P>
+
+<P>The next step is to make <I><FONT FACE=Helvetica COLOR=991122>Tracker</FONT></I> show the three attributes so that you can edit them. You can show the attributes by choosing them from the Attributes menu or by right-clicking and choosing them from the column headings as shown below.</P>
+</BLOCKQUOTE>
+
+<CENTER><IMG SRC="Images/NewAttribute.png" VSPACE="0" HSPACE="0" BORDER="0"></CENTER>
+
+<BLOCKQUOTE>
+<P>Now when you create a new unit file and show the three attributes they all will contain a single hyphen. You need to edit them and change them. To edit them simply click on that attribute or press <B><U><FONT FACE=Helvetica>Ctrl</FONT></U> + <U><FONT FACE=Helvetica>E</FONT></U></B> and use the <U><B><FONT FACE=Helvetica>Tab</FONT></B></U> key to navigate to that particular attribute.</P>
+
+<H3>The "Unit" attribute</H3>
+<BLOCKQUOTE>
+The Unit attribute is the name of the unit as should appear in an <B><FONT FACE=Helvetica COLOR=#550088>Option</FONT></B> button in the list of units in the Converter window. The Unit attribute should not be more than 255 characters long.</BLOCKQUOTE>
+
+<H3>The "Symbol" attribute</H3>
+<BLOCKQUOTE>
+The Symbol attribute is the symbol of the unit. For example, the unit "kilometer per hour" has a symbol "km/hr". If you don't know the symbol you can type in the unit name itself or leave it blank. The Symbol attribute should not be more than 255 characters long.
+</BLOCKQUOTE>
+
+<H3>The "Value" attribute</H3>
+<BLOCKQUOTE>
+The most important attribute is the Value attribute. This attribute needs to be entered carefully. As you know there needs to be a base unit and all other units are expressed in that base unit. The base unit must have its Value attribute as 1. For convenience sake keep the first unit as the base unit which means keep its Value attribute as 1. Then express the following units in that base unit.<BR><BR>
+
+For example, if the base unit is "meter" then its Value attribute is 1. If the next unit is centimeter its Value attribute should be 100, which means 100 centimeter = 1 meter. If the next unit is millimeter its Value attribute should be 1000, which means 1000 millimeters = 1 meter and so on.<BR><BR>
+
+Please note that in the Value attribute, you cannot use commas to seperate digits, but you can use the standard or the scientific notation. The Value attribute should not be more than 255 characters (digits) long.
+</BLOCKQUOTE>
+
+<P>To add more units don't use the <I><FONT FACE=Helvetica COLOR=991122>Tracker</FONT></I> Template, instead press <B><U><FONT FACE=Helvetica>Ctrl</FONT></U> + <U><FONT FACE=Helvetica>D</FONT></U></B> and Duplicate the unit above. Then use <B><U><FONT FACE=Helvetica>Ctrl</FONT></U> + <U><FONT FACE=Helvetica>E</FONT></U></B> to edit the new duplicate's file name and attributes.</P>
+
+<P>Below is an illustration showing attributes being edited using <I><FONT FACE=Helvetica COLOR=991122>Tracker</FONT></I>:</P>
+</BLOCKQUOTE>
+<CENTER><IMG SRC="Images/EditingAttributes.png" VSPACE="0" HSPACE="0" BORDER="0"></CENTER>
+
+<BLOCKQUOTE>
+<H3>Formula based conversions</H3>
+<P>This is slightly more complicated than adding the 'normal' factor based unit. If you really hate mathematics, formulas and equations then run away while you still can.</P>
+
+<P>The most typical (and the only one I can think of) example of a formula based conversion is the Temperature converter. Units that measure the temperature are not factors of other such units. For example, if you have the value in Celcius just by multiplying it with a value you cannot arrive at Farenheit. This is because the relation between the two are not multiplicative but is in the form of two different formulae.</P>
+
+<P>To add formula based conversions you use a different BeConverter file called "BeConverter Formula". This file does <I>not</I> have the "Value" attribute it instead has "To Equation", "From Equation" and "Constant" attributes apart from the two regular attributes "Unit" and "Symbol". Before we proceed please take a look at the Temperature folder for a better understanding of the files.</P>
+
+<P>You would already be knowing how to create a category, so I'll skip that part. Now to add a formula based unit you can use the <I><FONT FACE=Helvetica COLOR=991122>Tracker</FONT></I> template titled "BeConverter Formula". The next step is to view and edit the attributes. This also has been explained above in the factor based conversion.</P>
+
+<P>The formula based unit file must have its MIME type extension as "<TT>text/x-BeConverterFormula</TT>" (case sensitive and without the quotes, of course). If you use the <I><FONT FACE=Helvetica COLOR=991122>Tracker</FONT></I> template to create the file you need not bother to set it manually.</P>
+
+<H3>The "To Equation" attribute</H3>
+<BLOCKQUOTE>
+This is the expression which is used to convert a unit to the base unit. The base unit must have its "To Equation" and "From Equation" fields as the letter "b" and must have the "Constant (k)" attribute as "1". For all other units you will use this "To Equation" attribute to write an expression that will be used to convert to the base unit. Here you can enter any expression that can be solved by the <B><FONT FACE=Helvetica COLOR=#550088>Initial value</FONT></B> text box in the Converter window. For more information on what sort of expressions you can have read the "Using expresions" section of this manual.<BR><BR>
+
+In any case you are allowed to have one arbitary constant in the expression named "k" (without the quotes, not case-sensitive) whose value will be defined in the "Constant (k)" attribute.
+</BLOCKQUOTE>
+
+<H3>The "From Equation" attribute</H3>
+<BLOCKQUOTE>
+This is the expression which is used to convert the base unit to all the other units. Please read the "To Equation" attribute section on how the base unit must be added. Here too you are expected to add expressions supported by BeConverter. Typically this formula would be the inverse of the "To Equation" attribute and vice versa.
+</BLOCKQUOTE>
+
+<H3>The "Constant" attribute</H3>
+<BLOCKQUOTE>
+You can use one arbitary constant in the "To Equation" and "From Equation" attributes. That constant <I>must</I> be represented by the letter "k" (not case sensitive, no quotes). If you have such a constant its value must be defined here. Please note that in the "Constant" attribute you cannot have an expression. It has to be an absolute constant (numeric value).
+</BLOCKQUOTE>
+
+<P>Apart from the above attributes the two regular attributes namely "Unit" and "Symbol" will also need to be filled. Confused? Have a look at the Temperature folder again.</P>
+
+</BLOCKQUOTE>
+
+Once you have finished adding your own category with your own units you can test it by choosing your category from BeConverter. If you receive any errors when you try to use your category refer the "Errors and solutions" section of this manual to find out solutions to the error(s).<BR><BR>
+
+Explaining this process is a bit difficult since a lot of interaction with the user interface is required. Explaining every minor click will be cumbersome both to read as well as write (for me). If you are completely new to BeOS the first best thing to do is read the <A HREF="/boot/beos/documentation/User's Guide/index.html">BeOS User's Guide</A>. The next best way is to open a category or two and observe and try to understand all you can... then get back to this manual.
+</BLOCKQUOTE>
+<HR>
+<CENTER>|| <A HREF="Index.htm">Table of contents</A> || <A HREF="Using BeConverter.htm">Using BeConverter</A> || <A HREF="Errors.htm">Errors and solutions</A> ||</CENTER><HR>
+<FONT SIZE="1"><P><CENTER>
+
+Copyright &copy; 2001 Ramshankar. All Rights Reserved.<BR>
+All cited trademarks and registered trademarks are the property of their respective owners.</CENTER></P><FONT>
+</BLOCKQUOTE>
+
+</BODY>
+</HTML>
