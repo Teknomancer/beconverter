@@ -21,7 +21,7 @@
 #include "Box1.h"
 #include "CatListView.h"    // new
 
-#include <fstream.h>
+#include <fstream>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -40,6 +40,8 @@
 #include <ScrollView.h>
 #include <View.h>
 #include <ListView.h>
+
+using namespace std;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -63,7 +65,7 @@ MainWindow::MainWindow ()
     float scrollval = 0;
     long selectindex = 0;
 
-    if (f != NULL)
+    if (f)
     {
         char setting[10];
         char value[30];
@@ -128,7 +130,7 @@ bool MainWindow::QuitRequested ()
     fstream f (settings_path, ios::out);
 
     // If fstream init failed
-    if (f == NULL)
+    if (!f)
     {
         BAlert *fatal_alert;
         char error[B_PATH_NAME_LENGTH + 1000];

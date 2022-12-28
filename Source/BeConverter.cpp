@@ -24,7 +24,7 @@
 #include "Box1.h"
 #include "CatListView.h"
 
-#include <fstream.h>
+#include <fstream>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -40,6 +40,8 @@
 #include <TextView.h>
 #include <String.h>
 #include <Mime.h>
+
+using namespace std;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -73,7 +75,7 @@ void BeConverter::ReadyToRun ()
 
         fstream f (settings_path, ios::in);
 
-        if (f != NULL)
+        if (f)
         {
             char tempbuf[50];
             char value[100];
@@ -121,13 +123,13 @@ void BeConverter::MessageReceived (BMessage *message)
                 // Open a temp file and write the index to it
                 // Then that index will be accessed using a BDirectory's
                 // GetNextEntry method.
-                find_directory (B_COMMON_TEMP_DIRECTORY, &path, true);
+                find_directory (B_SYSTEM_TEMP_DIRECTORY, &path, true);
                 sprintf (tempfile, "%s/Bec937373866", path.Path ());
 
                 fstream f (tempfile, ios::out);
 
                 long x = -1;
-                if (f != NULL)
+                if (f)
                 {
                     x = (long)mainWindow->mainView->box1->catList->CurrentSelection ();
 
@@ -262,7 +264,7 @@ bool BeConverter::QuitRequested ()
 {
     // Delete the temporary file created by BeConverter
     BPath path;
-    find_directory (B_COMMON_TEMP_DIRECTORY, &path, false);
+    find_directory (B_SYSTEM_TEMP_DIRECTORY, &path, false);
 
     char temp_file [B_PATH_NAME_LENGTH];
     sprintf (temp_file, "%s/Bec937373866", path.Path());
