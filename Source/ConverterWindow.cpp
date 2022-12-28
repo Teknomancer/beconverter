@@ -22,10 +22,10 @@
 #include "ConverterView.h"
 
 #include <Alert.h>
-#include <fstream.h>
+#include <fstream>
 #include <stdlib.h>
 #include <stdio.h>
-#include <iostream.h>
+#include <iostream>
 #include <Directory.h>
 #include <Rect.h>
 #include <Path.h>
@@ -33,6 +33,8 @@
 #include <FindDirectory.h>
 #include <Roster.h>
 #include <String.h>
+
+using namespace std;
 
 long nunits;
 
@@ -59,7 +61,7 @@ ConverterWindow::ConverterWindow()
     udir.SetTo (units_path);
 
     BPath path, unitpath;
-    find_directory (B_COMMON_TEMP_DIRECTORY, &path, true);
+    find_directory (B_SYSTEM_TEMP_DIRECTORY, &path, true);
 
     char f[B_PATH_NAME_LENGTH];
     sprintf (f, "%s/Bec937373866", path.Path());
@@ -110,7 +112,7 @@ ConverterWindow::ConverterWindow()
     long left_coord = 80+130;
     long top_coord = 22+50;
 
-    if (fwp != NULL)
+    if (fwp)
     {
         char setting[10];
         char value[30];
@@ -174,7 +176,7 @@ bool ConverterWindow::QuitRequested(void)
     fstream f (settings_path, ios::out);
 
     // If fstream init failed
-    if (f == NULL)
+    if (!f)
     {
         BAlert *fatal_alert;
         char error[B_PATH_NAME_LENGTH + 1000];

@@ -31,7 +31,7 @@
 #include <Entry.h>
 #include <Path.h>
 #include <String.h>
-#include <iostream.h>
+#include <iostream>
 #include <Roster.h>
 #include <stdio.h>
 #include <Bitmap.h>

@@ -23,7 +23,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <fstream.h>
+#include <fstream>
 
 #include <TextControl.h>
 #include <Application.h>
@@ -47,6 +47,9 @@
 #include <Bitmap.h>
 #include <TranslationUtils.h>
 #include <Button.h>
+
+
+using namespace std;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -112,7 +115,7 @@ ConverterView::ConverterView (const char *dir)
     fstream f(settings_path, ios::in);
 
     xcalc.UseDegrees();     // By default set to degrees
-    if (f != NULL)
+    if (f)
     {
         char tempbuf[50];
         char value[100];
@@ -488,7 +491,7 @@ void ConverterView::MessageRecd (BMessage *message)
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void ConverterView::Calculate (int new_base, const char* text = NULL)
+void ConverterView::Calculate (int new_base, const char* text)
 {
     // Convert It!!!
     double acv;

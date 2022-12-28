@@ -20,7 +20,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include <fstream.h>
+#include <fstream>
 
 #include <Application.h>
 #include <TextView.h>
@@ -34,6 +34,8 @@
 #include <Bitmap.h>
 #include <TranslationUtils.h>
 #include <Entry.h>
+
+using namespace std;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -89,7 +91,7 @@ OptionsView::OptionsView()
 
     fstream f (settings_path, ios::in);
 
-    if (f != NULL)
+    if (f)
     {
         char tempbuf[50];
         char value[100];
