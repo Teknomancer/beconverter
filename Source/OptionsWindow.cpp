@@ -19,7 +19,7 @@
 #include "OptionsWindow.h"
 #include "OptionsView.h"
 
-#include <fstream.h>
+#include <fstream>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -34,6 +34,8 @@
 #include <Rect.h>
 #include <TextControl.h>
 #include <CheckBox.h>
+
+using namespace std;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -62,7 +64,7 @@ OptionsWindow::OptionsWindow ()
     long left_coord = 250;      // Default position
     long top_coord = 200;       // Default position
 
-    if (f != NULL)
+    if (f)
     {
         char setting[10];
         char value[30];
@@ -157,7 +159,7 @@ void OptionsWindow::Validate_Precision ()
 
             fstream f (settings_path, ios::out);
 
-            if (f == NULL)
+            if (!f)
             {
                 BAlert *fatal_alert;
                 char error[B_PATH_NAME_LENGTH + 1000];
@@ -202,7 +204,7 @@ void OptionsWindow::Validate_Precision ()
         // Use fstream object to open and write to the file
         fstream f (settings_path, ios::out);
 
-        if (f == NULL)
+        if (!f)
         {
             BAlert *fatal_alert;
             char error[B_PATH_NAME_LENGTH + 1000];
@@ -252,7 +254,7 @@ void OptionsWindow::SavePosition ()
     // positions to it
     fstream f2 (winsettings, ios::out);
 
-    if (f2 == NULL)
+    if (!f2)
     {
         BAlert *fatal_alert;
         char error[B_PATH_NAME_LENGTH + 1000];

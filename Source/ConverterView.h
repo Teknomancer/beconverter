@@ -21,10 +21,11 @@
 #include <View.h>
 #include "XEvaluator.h"
 
-class MenuField;
-class PopUpMenu;
-class RadioButton;
-class Button;
+class BCheckBox;
+class BMenuField;
+class BPopUpMenu;
+class BRadioButton;
+class BButton;
 class BStringView;
 class BTextControl;
 
