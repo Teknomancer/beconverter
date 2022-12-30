@@ -13,6 +13,6 @@ The final version available for BeOS is 1.2 with no further updates planned.
 
 Extra credits for the original BeOS port:
 
-Programming: Ramshankar ("Somebody" on BeShare, aka Teknomancer)
-Encouragement: Ablyss (on BeShare)
+Programming: Ramshankar ("Somebody" on BeShare, aka Teknomancer)  
+Encouragement: Ablyss (on BeShare)  
 Help with BMimeType: Marco Nelissen
