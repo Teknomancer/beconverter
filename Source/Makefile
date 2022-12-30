@@ -47,6 +47,7 @@ SRCS = \
 	OptionsView.cpp \
 	OptionsWindow.cpp \
 	StaticLabel.cpp \
+	XEvaluator.cpp
 
 #	Specify the resource definition files to use. Full or relative paths can be
 #	used.
