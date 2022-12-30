@@ -1,3 +1,7 @@
+## SPDX-License-Identifier: BSD-3-Clause
+## Copyright (c) 2023 OscarL.
+## All rights reserved.
+
 ## Haiku Generic Makefile v2.6 ##
 
 ## Fill in this file to specify the project being created, and the referenced
